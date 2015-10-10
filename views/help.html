@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>Instructions</h1>
+    <p>The objective of this <em>challenge</em> is to access this website via "<em><strong>Re</strong>presentational <strong>S</strong>tate <strong>T</strong>ransfer</em>",
+      more commonly referred to as "<em>REST</em>".</p>
+    <p>REST is useful to master, since a <em>lot</em> of websites use it to change the state of their website.</p>
+    <h3>What you have to do</h3>
+    <p>
+      Write a <em>C#</em> program capable of doing <em>GET</em> (Read), <em>PUT</em> (Update), and <em>DELETE</em> calls on the server to modify the database.<br>
+      The database will display entries on the <a href="/">front page</a>.
+    </p>
+
+    <h3>Your REST Entry Points</h3>
+    <table class="table table-striped">
+      <tr><th>Type</th><th>URI</th><th>Description</th></tr>
+      <tr><td>GET</td><td>/list</td><td>Gets the whole table as a JSON array</td></tr>
+      <tr><td>GET</td><td>/list?sig=:q:</td><td>Gets a part of the table where the signature matches the query :q:</td></tr>
+      <tr><td>PUT</td><td>/list/:m:/:s:</td><td>Adds a new message to the table. :m: is the message, :s: is the name of the person who wrote it</td></tr>
+      <tr><td>DELETE</td><td>/list/:i:</td><td>Deletes an entry from the table given by its ID :i:</td></tr>
+    </table>
+    <h3>PS</h3>
+    <p>If the alignment and styling looks like absolute shit, it's cuz I didn't want to bother wasting additional 4 hours in CSS trying to fix the damned thing.<br>
+      So please bare with me</p>
+    <h3>Hint</h3>
+    <p>A great tool for testing out REST calls on Google Chrome is <em><a href="https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo?hl=en-US">Advanced REST Client</a></em>, if you use Firefox instead, I can recommend <em><a href="https://addons.mozilla.org/en-us/firefox/addon/rest-easy/">REST Easy</a></em>.</p>
+    <script src="/bower/angular/angular.min.js"></script>
+  </body>
+</html>

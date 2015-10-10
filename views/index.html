@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="challenge">
+  <head>
+    <link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+    <h1>Hello Everyone!</h1>
+    <p>Go to <a href="/help">help</a> for instructions </p>
+    <h2>The Data</h2>
+    <div ng-controller="ListController as listCtrl">
+      <div>
+        Search <input ng-model="query" class="input">
+      </div>
+      <div>
+      <table class="table table-striped">
+        <tr><th>#</th><th>Message</th><th>Added By</th></tr>
+        <tr ng-repeat="e in listCtrl.list | filter:query">
+          <td>{{e.id}}</td><td>{{e.message}}</td><td>{{e.signature}}</td>
+        </tr>
+      </table>
+      </div>
+    </div>
+    <script src="/bower/angular/angular.js"></script>
+    <script src="/bower/angular-resource/angular-resource.js"></script>
+    <script src="/ng/app.js"></script>
+  </body>
+</html>
